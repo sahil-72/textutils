@@ -4,12 +4,12 @@ import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
 import React, { useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 
 function App(props) {
@@ -20,7 +20,7 @@ function App(props) {
   const toggleMode = () => {
     if (mode === 'light') {
       setmode('dark');
-      document.body.style.backgroundColor = '#042743';
+      document.body.style.backgroundColor = 'rgb(40, 44, 47)';
       document.body.style.color = 'white';
       showAlert('Dark mode enabled', 'success');
     }
@@ -51,12 +51,12 @@ function App(props) {
   return (
     <>
 
-      {/* <Navbar title = 'Textutil' home = 'Home' mode={mode} togglemode={toggleMode} />
+      <Navbar title = 'Textutil' home = 'Home' mode={mode} togglemode={toggleMode} />
     <Alert alert = {alert}/>
-    <Textform placeholder = 'Textarea' mode={mode} /> */}
+    <Textform placeholder = 'Textarea' mode={mode} />
       {/* <About/> */}
 
-      <Router>
+      {/* <Router>
         <Navbar title='Textutil' home='Home' mode={mode} togglemode={toggleMode} />
         <Alert alert={alert} />
         <Routes>
@@ -64,7 +64,7 @@ function App(props) {
           <Route exact path="/about" element={<About mode={mode} />} > </Route>
           <Route exact path="/" element={<Textform placeholder='Enter Text' mode={mode} />}> </Route>
         </Routes>
-      </Router>
+      </Router> */}
 
 
 
